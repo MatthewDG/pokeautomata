@@ -36,6 +36,10 @@ and the About modal.  Game controls will include Start, Stop, and Reset buttons 
 
 ![wireframes](./docs/pokeautomata-wireframe.png)
 
+![game-board wireframe](./docs/pokeautomata-game-board-wireframe.png)
+
+![test-board wireframe](./docs/pokeautomata-test-board-wireframe.png)
+
 ### Architecture and Technologies
 
 This project will be implemented with the following technologies:
