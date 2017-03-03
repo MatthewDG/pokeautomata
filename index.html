@@ -15,6 +15,7 @@
       <button id="reset-button">RESET</button>
       <button id="lock-select">Enable hover assign</button>
       <button id="step-forward">Step</button>
+      <button id="toggle-grid">Toggle grid</button>
       <select id="type-select">
         <option value="NORMAL">Normal</option>
         <option value="FIGHT">Fight</option>
@@ -29,8 +30,13 @@
         <option value="ELECTRIC">Electric</option>
         <option value="PSYCHIC">Psychic</option>
         <option value="ICE">Ice</option>
-        <option value="DRAGON">Dragon</option>
+        <option value="STEEL">Steel</option>
+        <option value="DARK">Dark</option>
+        <option value="FAIRY">Fairy</option>
       </select>
+      <label>Speed
+        <input id="speed-slider" type="range" min="10" max="5000" step="100" />
+      </label>
     </div>
     <canvas id='ctx' width=1000 height="600"></canvas>
   </body>
