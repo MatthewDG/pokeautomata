@@ -10,9 +10,27 @@
     <script type='text/javascript' src='lib/bundle.js'></script>
   </head>
   <body>
-    <button id="play-button">PLAY</button>
-    <button id="reset-button">RESET</button>
-    <button id="lock-select">Enable hover assign</button>
+    <div class="poke-interface">
+      <button id="play-button">PLAY</button>
+      <button id="reset-button">RESET</button>
+      <button id="lock-select">Enable hover assign</button>
+      <select id="type-select">
+        <option value="NORMAL">Normal</option>
+        <option value="FIGHT">Fight</option>
+        <option value="POISON">Poison</option>
+        <option value="GROUND">Ground</option>
+        <option value="ROCK">Rock</option>
+        <option value="BUG">Bug</option>
+        <option value="GHOST">Ghost</option>
+        <option value="FIRE">Fire</option>
+        <option value="WATER">Water</option>
+        <option value="GRASS">Grass</option>
+        <option value="ELECTRIC">Electric</option>
+        <option value="PSYCHIC">Psychic</option>
+        <option value="ICE">Ice</option>
+        <option value="DRAGON">Dragon</option>
+      </select>
+    </div>
     <canvas id='ctx' width=1000 height="600"></canvas>
   </body>
 </html>
