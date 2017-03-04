@@ -7,44 +7,61 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"
     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>
+
     <script type='text/javascript' src='lib/bundle.js'></script>
+
+
+
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
-  <body>
+  <body class="pokefont">
+    <h2>Professor Oak's PokeAutomata</h2>
     <div class="poke-interface">
-      <button id="play-button">PLAY</button>
-      <button id="reset-button">RESET</button>
-      <button id="lock-select">Enable hover assign</button>
-      <button id="step-forward">Step</button>
-      <button id="toggle-grid">Toggle grid</button>
-      <select id="type-select">
-        <option value="NORMAL">Normal</option>
-        <option value="FIGHT">Fight</option>
-        <option value="POISON">Poison</option>
-        <option value="GROUND">Ground</option>
-        <option value="ROCK">Rock</option>
-        <option value="BUG">Bug</option>
-        <option value="GHOST">Ghost</option>
-        <option value="FIRE">Fire</option>
-        <option value="WATER">Water</option>
-        <option value="GRASS">Grass</option>
-        <option value="ELECTRIC">Electric</option>
-        <option value="PSYCHIC">Psychic</option>
-        <option value="ICE">Ice</option>
-        <option value="STEEL">Steel</option>
-        <option value="DARK">Dark</option>
-        <option value="FAIRY">Fairy</option>
-      </select>
-      <select id="initial-state">
-        <option selected="selected" disabled="disabled">Battle preset</option>
-        <option value="random">Random</option>
-        <option value="firstgen">1st Generation Type Distribution</option>
-        <option value="secondgen">2nd Generation Type Distribution</option>
-        <option value="starterpokemon">Starter Pokemon Types</option>
-        <option value="fillwithtype">Fill board with selected type</option>
-      </select>
+      <div class="main-buttons">
+        <button id="play-button">PLAY</button>
+        <button id="reset-button">RESET</button>
+        <button id="lock-select">Enable hover assign</button>
+        <button id="step-forward">Step</button>
+        <button id="toggle-grid">Toggle grid</button>
+      </div>
 
+      <div class="dropdowns">
+        <label>Assign Type
+          <select id="type-select">
+            <option value="NORMAL">Normal</option>
+            <option value="FIGHT">Fight</option>
+            <option value="POISON">Poison</option>
+            <option value="GROUND">Ground</option>
+            <option value="ROCK">Rock</option>
+            <option value="BUG">Bug</option>
+            <option value="GHOST">Ghost</option>
+            <option value="FIRE">Fire</option>
+            <option value="WATER">Water</option>
+            <option value="GRASS">Grass</option>
+            <option value="ELECTRIC">Electric</option>
+            <option value="PSYCHIC">Psychic</option>
+            <option value="ICE">Ice</option>
+            <option value="STEEL">Steel</option>
+            <option value="DARK">Dark</option>
+            <option value="FAIRY">Fairy</option>
+          </select></label>
+
+          <label>Initial states
+            <select id="initial-state">
+              <option selected="selected" disabled="disabled">Battle preset</option>
+              <option value="random">Random</option>
+              <option value="firstgen">1st Generation Type Distribution</option>
+              <option value="secondgen">2nd Generation Type Distribution</option>
+              <option value="starterpokemon">Starter Pokemon Types</option>
+              <option value="fillwithtype">Fill board with selected type</option>
+            </select></label>
+          </div>
+
+          <canvas id='ctx' width=1000 height="600"></canvas>
     </div>
-    <canvas id='ctx' width=1000 height="600"></canvas>
+
+    <footer class="icons">
+      <a href="https://github.com/MatthewDG/pokeautomata"><img src="assets/git-icon.png" /></a>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,35 @@
+@font-face {font-family: Pokemon GB;
+src: url('fonts/Pokemon GB.ttf');}
+.pokefont { font-family: Pokemon GB; font-size: 20px;}
+
+
+body{
+  background-color: rgb(217, 225, 209);
+}
+h2{
+  text-align: center;
+}
+
+button{
+  font-family: Pokemon GB;
+  background: rgba(120, 152, 192, .42);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+canvas{
+  border-radius: 5px;
+}
+
+label{
+  font-size: 10px;
+}
+
+.poke-interface{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
