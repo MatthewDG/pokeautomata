@@ -15,17 +15,34 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body class="pokefont">
+
+    <div id="0" class=modal>
+      <div class="modal-content">
+        <span class="exit">x</span>
+        <img id="professor-oak" src="assets/oak.png"/>
+        <p class="modal-text">Hello there! Welcome back to the world of Pokemon.
+          If you don't remember me, my name is Professor Oak.</p>
+        <p class="modal-text-2">I have been studying JavaScript DOM techniques so that I can bring
+        my research to the web. I am excited to share with you my latest creation: <br/><br/><strong>The PokeAutomata</strong></p>
+        <ol class="rules-list" style="display : none;">
+          <li>Poke</li>
+          <li>mon</li>
+          <li>pokemon</li>
+        </ol>
+      </div>
+    </div>
+
     <h2>Professor Oak's PokeAutomata</h2>
     <div class="poke-interface">
       <div class="main-buttons">
         <button id="play-button">PLAY</button>
         <button id="reset-button">RESET</button>
-        <button id="lock-select">Enable hover assign</button>
-        <button id="step-forward">Step</button>
-        <button id="toggle-grid">Toggle grid</button>
+        <button id="step-forward">STEP</button>
+        <button id="toggle-grid">TOGGLE GRID</button>
       </div>
 
       <div class="dropdowns">
+        <button id="lock-select">Enable hover assign</button>
         <label>Assign Type
           <select id="type-select">
             <option value="NORMAL">Normal</option>
@@ -41,6 +58,7 @@
             <option value="ELECTRIC">Electric</option>
             <option value="PSYCHIC">Psychic</option>
             <option value="ICE">Ice</option>
+            <option value="DRAGON">Dragon</option>
             <option value="STEEL">Steel</option>
             <option value="DARK">Dark</option>
             <option value="FAIRY">Fairy</option>

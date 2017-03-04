@@ -12,12 +12,31 @@ h2{
 
 button{
   font-family: Pokemon GB;
-  background: rgba(120, 152, 192, .42);
+  vertical-align: middle;
+  background: transparent;
   border: none;
   padding: 10px;
+  font-size: 14px;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+button:hover{
+  color: rgb(224, 38, 38);
+  opacity: .75;
+  transition: 0.2s;
+}
+
+.dropdowns{
+  margin: 10px 0px;
+}
+
+#lock-select{
+  font-size: 8px;
+  padding: 0;
+  border: none;
+  transition: 0.2s;
 }
 
 canvas{
@@ -26,10 +45,63 @@ canvas{
 
 label{
   font-size: 10px;
+  vertical-align: middle;
 }
 
 .poke-interface{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.modal{
+ display: none;
+ position: fixed;
+ z-index: 999;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content{
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 400px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 0 1px black,
+              inset 0 1px 0 1px black,
+              0 0 0 1px black,
+              inset 0 0 0 1px black;
+}
+
+.exit{
+  display: block;
+  text-align: right;
+}
+
+#professor-oak{
+  position: relative;
+  left: 38%;
+}
+
+.modal-text{
+  font-size: 10px;
+  width: 100%;
+  line-height: 12px;
+}
+
+.modal-text-2{
+  font-size: 10px;
+  width: 100%;
+  line-height: 12px;
+}
+
+.modal-text-2 > strong{
+  position: relative;
+  left: 20%;
+  font-size: 15px;
 }
