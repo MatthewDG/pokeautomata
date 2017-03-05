@@ -4,10 +4,10 @@
 
 PokeAutomata is a Pokemon battle themed **cellular automata** game. Each cell represents one of the 15 original Pokemon 'types'. In the Pokemon games and this battle simulator, a Pokemon's type determines the strength of its attacks on Pokemon of other types. (i.e. water beats fire, fire beats grass, grass beats water). The battle simulator will follow these rules:
 
-1. Each pokeCell represents a Pokemon with an assigned type and 50 HP.
+1. Each pokeCell represents a Pokemon with an assigned type and 20 HP.
 
 2. In each iteration, every pokeCell on the board 'battles' its eight neighbors, taking damage based on type advantages.
-3. A pokeCell with 0 HP is replaced by a pokeCell with full HP and the type that dealt the previous pokeCell the most damage. Tiebreaker logic is handled by comparing type dominance, total damage dealt and count of neighbors of the same type.
+3. A pokeCell with 0 HP is replaced by a pokeCell with full HP and the type that dealt the last attack.
 
 PokeAutomata's type match-ups will follow this chart provided from Bulbapedia:
 

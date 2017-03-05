@@ -57,7 +57,7 @@ label{
 .modal{
  display: none;
  position: fixed;
- z-index: 999;
+ z-index: 1;
  left: 0;
  top: 0;
  width: 100%;
@@ -70,6 +70,7 @@ label{
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
+  z-index: 999;
   width: 400px;
   border: 1px solid #fff;
   box-shadow: 0 1px 0 1px black,
@@ -91,7 +92,7 @@ label{
 .modal-text{
   font-size: 10px;
   width: 100%;
-  line-height: 12px;
+  line-height: 13px;
 }
 
 .modal-text-2{
@@ -104,4 +105,49 @@ label{
   position: relative;
   left: 20%;
   font-size: 15px;
+}
+
+.rules-list{
+  font-size: 10px;
+}
+
+.rules-list > li{
+  margin: 5px 0;
+  line-height: 12px;
+}
+
+.nav-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.exit{
+  cursor: pointer;
+}
+
+.exit:hover{
+  color: rgb(224, 38, 38);
+  transition: 0.2s;
+}
+
+#prev-button:hover:not([enabled="enabled"]){
+  color: rgb(127, 127, 127);
+}
+
+#next-button:hover:not([enabled="enabled"]){
+  color: rgb(127, 127, 127);
+}
+
+
+#next-button{
+  text-align: right;
+}
+
+.zoom{
+  style: inline-block;
+}
+
+.zoom-prompt{
+  font-size: 8px;
+  margin-left: 44px;
 }

@@ -22,13 +22,17 @@
         <img id="professor-oak" src="assets/oak.png"/>
         <p class="modal-text">Hello there! Welcome back to the world of Pokemon.
           If you don't remember me, my name is Professor Oak.</p>
+          <ol class="rules-list" style="display : none;">
+            <li>Each pokeCell represents a Pokemon with an assigned type and 20 HP.</li>
+            <li>In each cycle, every pokeCell on the board 'battles' each of its neighbors, receiving damage based on type advantages.</li>
+            <li>A pokeCell with 0 HP is replaced by a pokeCell with full HP and the type that dealt the last attack.</li>
+          </ol>
         <p class="modal-text-2">I have been studying JavaScript DOM techniques so that I can bring
-        my research to the web. I am excited to share with you my latest creation: <br/><br/><strong>The PokeAutomata</strong></p>
-        <ol class="rules-list" style="display : none;">
-          <li>Poke</li>
-          <li>mon</li>
-          <li>pokemon</li>
-        </ol>
+        my research to the web. I am excited to share with you my latest creation: <br/><br/><strong id="sub-title">The PokeAutomata</strong></p>
+        <div class="nav-buttons">
+          <button id="prev-button" enabled="disabled" disabled><</button>
+          <button id="next-button" enabled="enabled">></button>
+        </div>
       </div>
     </div>
 
