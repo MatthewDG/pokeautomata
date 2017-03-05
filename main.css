@@ -143,6 +143,12 @@ label{
   text-align: right;
 }
 
+.icons{
+  margin-top: 25px;
+  margin-right: 10px;
+  float: right;
+}
+
 .zoom{
   style: inline-block;
 }
