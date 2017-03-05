@@ -11,95 +11,57 @@ PokeAutomata is a Pokemon battle themed **cellular automata** game. Each cell re
 
 PokeAutomata's type match-ups will follow this chart provided from Bulbapedia:
 
-![type-matchups](./docs/type-matchup.png)
+![type-matchups](./assets/type-chart.png)
 
 - 1x damage removes one hit point from the defending pokeCell, 2x removes two hit points and so on.
 
-### Functionality & MVP  
+###Screenshot
 
-With the PokeAutomata battle simulator, users will be able to:
-
-- [ ] Start, pause, and reset the game board
-- [ ] Assign types to pokeCells in the initial state
-- [ ] Choose from preset demo states
-- [ ] Adjust the speed of cycles and size of the board.
-
-In addition, this project will include:
-
-- [ ] An About modal describing the background and rules of the game
-- [ ] A production README
-
-### Wireframes
-
-This app will consist of a single game view of the PokeBattleField, PokeBattleField controls
-and the About modal.  Game controls will include Start, Stop, and Reset buttons as well as a slider to control the speed. Preliminary ideas for preset demo states include random type distribution and type distribution based on generation I Pokemon types.
-
-![wireframes](./docs/pokeautomata-wireframe.png)
-
-![game-board wireframe](./docs/pokeautomata-game-board-wireframe.png)
-
-![test-board wireframe](./docs/pokeautomata-test-board-wireframe.png)
-
-### Architecture and Technologies
-
-This project will be implemented with the following technologies:
-
-- Vanilla JavaScript and `jQuery` for structure, game logic and interactivity.
-- `Easel.js` with `HTML5 Canvas` for DOM manipulation and sprite rendering,
-- Webpack to bundle and serve up the various scripts.
-
-In addition to the webpack entry file, there will be three scripts involved in this project:
-
-`poke_battlefield.js`: this script will handle the logic for creating and updating the necessary `Easel.js` elements and rendering them to the DOM. UI logic will live in this file as well.
-
-`poke_automata.js`: this script will handle the Pokemon battle type match-up logic.  An Automata object will hold a defending pokeCell and a 2D array of neighboring attacking pokeCells.  It will be responsible calculating total damage taken in the cycle and applying it to the defending pokeCell.
-
-`poke_cell.js`: this script will construct the pokeCell's stats including type and HP. It should also handle receiving damage results from the pokeAutomata.
-
-### Implementation Timeline
-
-**Day 1**:
-
-- Set up modular file structure
-- Get webpack bundling
-- Take time to get reacquainted with Canvas and setup HTML and stylesheet files.
-- Learn Easel.js to get a handle of far I can push this simulator visually   
-
-**Day 2**:
-
-- Design the pokeCell object's constructor
-- Render a square grid to the `Canvas` using `Easel.js`
-- Also render a square grid that is easy for testing
-- Assign cells color
-- Make cells interactive with type select dropdown and cell color toggle.
+![automata-gif](./docs/screenshot_1.gif)
 
 
-**Day 3**:
 
-- Write out battle system logic in pokeAutomata
-- Link pokeCell to pokeAutomata with functions that register damage
-- Get board to re-render based on the new state in time intervals.
+### Technologies
+
+The PokeAutomata uses vanilla Javascript to implement the object-oriented game logic. jQuery DOM manipulation and Easel.js are coupled together to build a simple yet dynamic user interface. For example, the following functions allows users to assign types to pokeCells:
+
+```javascript
+
+//game_view.js
+installHandlers(){
+  this.stage.on('mouseover', this.handleAssign.bind(this))
+  this.stage.on('click', this.handleAssign.bind(this))
+}
+
+handleAssign(){
+  let clickPos = [this.stage.mouseX, this.stage.mouseY];
+
+  let cellX = Math.floor((clickPos[0] - this.numRows % 2/2*this.squareSize)/this.squareSize);
+  let cellY = Math.floor((clickPos[1] - this.numCols % 2/2*this.squareSize)/this.squareSize);
+  this.pokeBattlefield.assignCell(cellX, cellY, this.typeToAssign);
+  let clickedPokeCell = this.pokeBattlefield.grid[cellX][cellY]
+  this.pokeBattlefield.drawCell(clickedPokeCell, this.stage, this.squareSize, cellX, cellY);
+  this.stage.update();
+}
+```
+```javascript
+//poke_cell.js
+assignCell(cellX, cellY, type){
+  this.grid[cellX][cellY] = new pokeCell(type);
+}
+```
 
 
-**Weekend**:
-
-- Add the following controls to the UI:
-  - Start, pause and stop simulation
-  - Initial State demos
-  - Step forward one cycle
-  - Timeout interval slider
-  - Board zoom
-  - Polish type select drop-down and board-user interactivity.
-- Don't forget to write an about modal!
+![type-select-gif](./docs/screenshot_2.gif)
 
 
 ### Bonus features
 
-Here are some ideas to make this battle simulator more true to the actual games:
+Here are some ideas to make this battle simulator more true to the actual games and provide a more exciting experience:
 
 - [ ] Spice up the game logic with dual-type pokeCells.
 - [ ] More demo simulations!
-- [ ] Add generation II types
+- [ ] Add keybindings that enable users to assign a type to a large group of cells at once.
 - [ ] Abstract pokeCells into individual Pokemon, building on top of the pokeAutomata logic accordingly.
-- [ ] Inspect pokeCell tooltip
-- [ ] Render game sprites instead of plain ol' cells.
+- [ ] Inspect pokeCell tooltip.
+- [ ] Render game sprites instead of just cell colors.
