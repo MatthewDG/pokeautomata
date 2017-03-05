@@ -570,6 +570,7 @@
 	    this.HP = 20;
 	    this.type = type;
 	    this.color = pokePalette[this.type];
+	    console.log("hi");
 	  }
 	
 	  _createClass(pokeCell, [{
