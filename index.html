@@ -9,7 +9,7 @@
     crossorigin="anonymous"></script>
 
     <script type='text/javascript' src='lib/bundle.js'></script>
-
+    <script src="https://use.fontawesome.com/023f5a96d3.js"></script>
 
 
     <link rel="stylesheet" type="text/css" href="main.css" />
@@ -44,7 +44,7 @@
         <button id="step-forward">STEP</button>
         <button id="toggle-grid">TOGGLE GRID</button>
         <button id="instructions">INSTRUCTIONS</button>
-        <button id="toggle-color">TOGGLE COLOR GUIDE</button>
+        <button id="toggle-color">COLOR GUIDE</button>
       </div>
 
       <div class="color-guide" style="display: none">
@@ -93,20 +93,24 @@
 
           <label>Initial states
             <select id="initial-state">
-              <option selected="selected" disabled="disabled">Battle preset</option>
-              <option value="random">Random</option>
+              <option disabled="disabled">Battle preset</option>
+              <option selected="selected" value="random">Random</option>
               <option value="firstgen">1st Generation Type Distribution</option>
               <option value="secondgen">2nd Generation Type Distribution</option>
               <option value="starterpokemon">Starter Pokemon Types</option>
               <option value="fillwithtype">Fill board with selected type</option>
+              <option value="empty">Empty</option>
             </select></label>
           </div>
 
           <canvas id='ctx' width=1000 height="600"></canvas>
     </div>
-
     <footer class="icons">
-      <a href="https://github.com/MatthewDG/pokeautomata"><img src="assets/git-icon.png" /></a>
+      <p>© Matthew Dylan Goldman</p>
+      <a href="https://github.com/MatthewDG/pokeautomata"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/matthew-dg/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+      <a href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
     </footer>
+
   </body>
 </html>
