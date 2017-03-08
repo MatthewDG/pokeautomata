@@ -4,7 +4,7 @@
 
 ### Introduction
 
-PokeAutomata is a Pokemon battle themed **cellular automata** game. Each cell represents one of the 15 original Pokemon 'types'. In the Pokemon games and this battle simulator, a Pokemon's type determines the strength of its attacks on Pokemon of other types. (i.e. water beats fire, fire beats grass, grass beats water). The battle simulator will follow these rules:
+PokeAutomata is a Pokemon battle themed **cellular automata** game. Each cell represents one of the 18 Pokemon 'types'. In the Pokemon games and this battle simulator, a Pokemon's type determines the strength of its attacks on Pokemon of other types. (i.e. water beats fire, fire beats grass, grass beats water). The battle simulator will follow these rules:
 
 1. Each pokeCell represents a Pokemon with an assigned type and 20 HP.
 
@@ -72,6 +72,6 @@ Here are some ideas to make this battle simulator more true to the actual games 
 
 Jack Moore's <a href="https://github.com/jackmoore/zoom">jQuery zoom </a> for modal chart zoom.
 
-Battle system was inspired by Kenny Cason's very awesome <a href="https://github.com/kennycason/cellular-automata-pokemon-types">cellular-automata-pokemon-types</a> written in Kotlin. 
+Battle system was inspired by Kenny Cason's very awesome <a href="https://github.com/kennycason/cellular-automata-pokemon-types">cellular-automata-pokemon-types</a> written in Kotlin.
 
 Art assets used in this project are for educational purposes only. Art assets are property of Nintendo.
