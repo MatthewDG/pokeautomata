@@ -17,7 +17,7 @@ PokeAutomata's type match-ups will follow this chart provided from Bulbapedia:
 
 - 1x damage removes one hit point from the defending pokeCell, 2x removes two hit points and so on.
 
-###Screenshot
+### Screenshot
 
 ![automata-gif](./docs/screenshot_1.gif)
 
