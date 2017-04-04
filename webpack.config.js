@@ -1,7 +1,9 @@
+const path = require('path');
+
 module.exports = {
   entry: './lib/main.js',
   output: {
-    path: './lib',
+    path: path.resolve(__dirname, 'lib'),
     filename: 'bundle.js',
   },
   module: {
@@ -9,7 +11,7 @@ module.exports = {
       {
         test: [/\.js?$/],
         exclude: /(node_modules)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
@@ -18,7 +20,6 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ['', '.js']
-  },
-  debug: true,
+    extensions: ['.js']
+  }
 };
