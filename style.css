@@ -28,12 +28,20 @@ button:hover{
   transition: 0.2s;
 }
 
+.color-guide{
+  width: 50%;
+}
+
+.type-button img{
+  box-shadow: 4px 5px 7px #a9aeae;
+}
+
 .dropdowns{
   margin: 10px 0px;
 }
 
 #lock-select{
-  font-size: 8px;
+  font-size: 12px;
   padding: 0;
   border: none;
   transition: 0.2s;

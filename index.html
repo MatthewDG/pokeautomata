@@ -46,53 +46,31 @@
         <button id="step-forward">STEP</button>
         <button id="toggle-grid">TOGGLE GRID</button>
         <button id="instructions">INSTRUCTIONS</button>
-        <button id="toggle-color">COLOR GUIDE</button>
       </div>
 
-      <div class="color-guide" style="display: none">
-        <span><img src="assets/types/normal.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/fight.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/flying.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/poison.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/ground.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/rock.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/bug.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/ghost.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/steel.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/fire.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/water.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/grass.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/electric.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/psychic.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/ice.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/dragon.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/dark.gif" width="50px" alt="normal"/></span>
-        <span><img src="assets/types/fairy.gif" width="50px" alt="normal"/></span>
+      <div class="color-guide">
+        <button class="type-button" value="NORMAL"><img src="assets/types/normal.gif" width="50px" alt="normal"/></button>
+        <button class="type-button" value="FIGHT"><img src="assets/types/fight.gif" width="50px" alt="fight"/></button>
+        <button class="type-button" value="FLYING"><img src="assets/types/flying.gif" width="50px" alt="flying"/></button>
+        <button class="type-button" value="POISON"><img src="assets/types/poison.gif" width="50px" alt="poison"/></button>
+        <button class="type-button" value="GROUND"><img src="assets/types/ground.gif" width="50px" alt="ground"/></button>
+        <button class="type-button" value="ROCK"><img src="assets/types/rock.gif" width="50px" alt="rock"/></button>
+        <button class="type-button" value="BUG"><img src="assets/types/bug.gif" width="50px" alt="bug"/></button>
+        <button class="type-button" value="GHOST"><img src="assets/types/ghost.gif" width="50px" alt="ghost"/></button>
+        <button class="type-button" value="STEEL"><img src="assets/types/steel.gif" width="50px" alt="steel"/></button>
+        <button class="type-button" value="FIRE"><img src="assets/types/fire.gif" width="50px" alt="fire"/></button>
+        <button class="type-button" value="WATER"><img src="assets/types/water.gif" width="50px" alt="water"/></button>
+        <button class="type-button" value="GRASS"><img src="assets/types/grass.gif" width="50px" alt="grass"/></button>
+        <button class="type-button" value="ELECTRIC"><img src="assets/types/electric.gif" width="50px" alt="electric"/></button>
+        <button class="type-button" value="PSYCHIC"><img src="assets/types/psychic.gif" width="50px" alt="psychic"/></button>
+        <button class="type-button" value="ICE"><img src="assets/types/ice.gif" width="50px" alt="ice"/></button>
+        <button class="type-button" value="DRAGON"><img src="assets/types/dragon.gif" width="50px" alt="dragon"/></button>
+        <button class="type-button" value="DARK"><img src="assets/types/dark.gif" width="50px" alt="dark"/></button>
+        <button class="type-button" value="FAIRY"><img src="assets/types/fairy.gif" width="50px" alt="fairy"/></span>
       </div>
 
       <div class="dropdowns">
         <button id="lock-select">Enable hover assign</button>
-        <label>Assign Type
-          <select id="type-select">
-            <option value="NORMAL">Normal</option>
-            <option value="FIGHT">Fight</option>
-            <option value="POISON">Poison</option>
-            <option value="GROUND">Ground</option>
-            <option value="ROCK">Rock</option>
-            <option value="BUG">Bug</option>
-            <option value="GHOST">Ghost</option>
-            <option value="FIRE">Fire</option>
-            <option value="WATER">Water</option>
-            <option value="GRASS">Grass</option>
-            <option value="ELECTRIC">Electric</option>
-            <option value="PSYCHIC">Psychic</option>
-            <option value="ICE">Ice</option>
-            <option value="DRAGON">Dragon</option>
-            <option value="STEEL">Steel</option>
-            <option value="DARK">Dark</option>
-            <option value="FAIRY">Fairy</option>
-          </select></label>
-
           <label>Initial states
             <select id="initial-state">
               <option disabled="disabled">Battle preset</option>
