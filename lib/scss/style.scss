@@ -1,11 +1,11 @@
 @font-face {font-family: Pokemon GB;
-src: url('fonts/Pokemon GB.ttf');}
+src: url('../../fonts/Pokemon GB.ttf');}
 .pokefont { font-family: Pokemon GB; font-size: 20px;}
-
 
 body{
   background-color: rgb(217, 225, 209);
 }
+
 h2{
   text-align: center;
 }
@@ -20,13 +20,13 @@ button{
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+  &:hover{
+    color: rgb(224, 38, 38);
+    opacity: .75;
+    transition: 0.2s;
+  }
 }
 
-button:hover{
-  color: rgb(224, 38, 38);
-  opacity: .75;
-  transition: 0.2s;
-}
 
 .color-guide{
   width: 50%;
@@ -90,6 +90,11 @@ label{
 .exit{
   display: block;
   text-align: right;
+  cursor: pointer;
+  &:hover{
+    color: rgb(224, 38, 38);
+    transition: 0.2s;
+  }
 }
 
 #professor-oak{
@@ -107,21 +112,20 @@ label{
   font-size: 10px;
   width: 100%;
   line-height: 12px;
+  strong{
+    position: relative;
+    left: 20%;
+    font-size: 15px;
+  }
 }
 
-.modal-text-2 > strong{
-  position: relative;
-  left: 20%;
-  font-size: 15px;
-}
 
 .rules-list{
   font-size: 10px;
-}
-
-.rules-list > li{
-  margin: 5px 0;
-  line-height: 12px;
+  li{
+    margin: 5px 0;
+    line-height: 12px;
+  }
 }
 
 .nav-buttons{
@@ -129,45 +133,32 @@ label{
   justify-content: space-between;
 }
 
-.exit{
-  cursor: pointer;
-}
-
-.exit:hover{
-  color: rgb(224, 38, 38);
-  transition: 0.2s;
-}
-
 #prev-button:hover:not([enabled="enabled"]){
   color: rgb(127, 127, 127);
 }
 
-#next-button:hover:not([enabled="enabled"]){
-  color: rgb(127, 127, 127);
-}
-
-
 #next-button{
   text-align: right;
+  &:hover:not([enabled="enabled"]){
+    color: rgb(127, 127, 127);
+  }
 }
 
 .icons{
   margin: 0 auto;
   width: 1000px;
-}
-
-.icons > p{
-  margin-top: 21px;
-  font-size: 10px;
-  float: left;
-}
-
-.icons > a{
-  vertical-align: middle;
-  text-decoration: none;
-  color: #000;
-  margin: 5px 10px;
-  float: right;
+  p{
+    margin-top: 21px;
+    font-size: 10px;
+    float: left;
+  }
+  a{
+    vertical-align: middle;
+    text-decoration: none;
+    color: #000;
+    margin: 5px 10px;
+    float: right;
+  }
 }
 
 .zoom{
