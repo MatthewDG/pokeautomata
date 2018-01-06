@@ -768,6 +768,9 @@
 	        case "FIGHT":
 	          this.$massAssignInstruction.text("Option/Alt + Click to use Seismic Toss!");
 	          break;
+	        case "FLYING":
+	          this.$massAssignInstruction.text("Option/Alt + Click to use Aerial Ace!");
+	          break;
 	        case "POISON":
 	          this.$massAssignInstruction.text("Option/Alt + Click to use Toxic!");
 	          break;
